@@ -40,7 +40,7 @@ namespace StarForce
             GameEntry.Event.Subscribe(WebRequestFailureEventArgs.EventId, OnWebRequestFailure);
 
             // 向服务器请求版本信息
-            GameEntry.WebRequest.AddWebRequest(Utility.Text.Format(GameEntry.BuiltinData.BuildInfo.CheckVersionUrl, GetPlatformPath()), this);
+            GameEntry.WebRequest.AddWebRequest(Utility.Text.Format(GameEntry.BuiltinData.BuildInfo.CheckVersionUrl, PlatformUtility.GetPlatformStr()), this);
         }
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
@@ -130,7 +130,7 @@ namespace StarForce
             }
 
             // 设置资源更新下载地址
-            GameEntry.Resource.UpdatePrefixUri = Utility.Path.GetRegularPath(m_VersionInfo.UpdatePrefixUri);
+            GameEntry.Resource.UpdatePrefixUri = string.Format(Utility.Path.GetRegularPath(m_VersionInfo.UpdatePrefixUri), PlatformUtility.GetPlatformStr());
 
             m_CheckVersionComplete = true;
             m_NeedUpdateVersion = GameEntry.Resource.CheckVersionList(m_VersionInfo.InternalResourceVersion) == CheckVersionListResult.NeedUpdate;

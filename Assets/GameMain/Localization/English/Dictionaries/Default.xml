@@ -10,6 +10,7 @@
     <String Key="Menu.SettingButton" Value="SETTINGS" />
     <String Key="Menu.AboutButton" Value="ABOUT" />
     <String Key="Menu.QuitButton" Value="QUIT" />
+	<String Key="Menu.OpenUrl" Value="官网地址" />
     <String Key="Dialog.ConfirmButton" Value="OK" />
     <String Key="Dialog.CancelButton" Value="CANCEL" />
     <String Key="Dialog.OtherButton" Value="" />

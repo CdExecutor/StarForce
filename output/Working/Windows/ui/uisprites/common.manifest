@@ -1,0 +1,34 @@
+ManifestFileVersion: 0
+CRC: 1700736590
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: aef2f158873539b86d31e7290d2309f3
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c90fc19e2679e5295d10bd00f33cb4c3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/GameMain/UI/UISprites/Common/line.png
+- Assets/GameMain/UI/UISprites/Common/progress-conner.png
+- Assets/GameMain/UI/UISprites/Common/round-button-filled.png
+- Assets/GameMain/UI/UISprites/Common/circle-filled.png
+- Assets/GameMain/UI/UISprites/Common/circle-outline.png
+- Assets/GameMain/UI/UISprites/Common/background.png
+- Assets/GameMain/UI/UISprites/Common/button-filled.png
+- Assets/GameMain/UI/UISprites/Common/dialog-background.png
+- Assets/GameMain/UI/UISprites/Common/progressbar.png
+- Assets/GameMain/UI/UISprites/Common/box.png
+- Assets/GameMain/UI/UISprites/Common/info.png
+- Assets/GameMain/UI/UISprites/Common/round-button-outline.png
+- Assets/GameMain/UI/UISprites/Common/dialog-title-background.png
+- Assets/GameMain/UI/UISprites/Common/checked.png
+- Assets/GameMain/UI/UISprites/Common/button-outline.png
+- Assets/GameMain/UI/UISprites/Common/circle.png
+- Assets/GameMain/UI/UISprites/Common/progressbar-background.png
+Dependencies: []

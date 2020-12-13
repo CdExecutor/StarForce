@@ -15,6 +15,7 @@ namespace StarForce
         private int m_UpdateSuccessCount = 0;
         private List<UpdateLengthData> m_UpdateLengthData = new List<UpdateLengthData>();
         private UpdateResourceForm m_UpdateResourceForm = null;
+        private ConfirmForm m_ConfirmFormForm = null;
 
         public override bool UseNativeDialog
         {
@@ -36,25 +37,30 @@ namespace StarForce
             m_UpdateSuccessCount = 0;
             m_UpdateLengthData.Clear();
             m_UpdateResourceForm = null;
+            m_ConfirmFormForm = null;
 
             GameEntry.Event.Subscribe(ResourceUpdateStartEventArgs.EventId, OnResourceUpdateStart);
             GameEntry.Event.Subscribe(ResourceUpdateChangedEventArgs.EventId, OnResourceUpdateChanged);
             GameEntry.Event.Subscribe(ResourceUpdateSuccessEventArgs.EventId, OnResourceUpdateSuccess);
             GameEntry.Event.Subscribe(ResourceUpdateFailureEventArgs.EventId, OnResourceUpdateFailure);
 
-            if (Application.internetReachability == NetworkReachability.ReachableViaCarrierDataNetwork)
+            if (Application.internetReachability == NetworkReachability.ReachableViaCarrierDataNetwork
+                || Application.internetReachability == NetworkReachability.ReachableViaLocalAreaNetwork)
             {
-                GameEntry.UI.OpenDialog(new DialogParams
+                if (m_ConfirmFormForm == null)
                 {
-                    Mode = 2,
-                    Title = GameEntry.Localization.GetString("UpdateResourceViaCarrierDataNetwork.Title"),
-                    Message = GameEntry.Localization.GetString("UpdateResourceViaCarrierDataNetwork.Message"),
-                    ConfirmText = GameEntry.Localization.GetString("UpdateResourceViaCarrierDataNetwork.UpdateButton"),
-                    OnClickConfirm = StartUpdateResources,
-                    CancelText = GameEntry.Localization.GetString("UpdateResourceViaCarrierDataNetwork.QuitButton"),
-                    OnClickCancel = delegate (object userData) { UnityGameFramework.Runtime.GameEntry.Shutdown(ShutdownType.Quit); },
-                });
-
+                    m_ConfirmFormForm = Object.Instantiate(GameEntry.BuiltinData.ConfirmFormTemplate);
+                    m_ConfirmFormForm.SetConfirUI(new DialogParams
+                    {
+                        Mode = 2,
+                        Title = GameEntry.Localization.GetString("UpdateResourceViaCarrierDataNetwork.Title"),
+                        Message = GameEntry.Localization.GetString("UpdateResourceViaCarrierDataNetwork.Message",GetByteLengthString(m_UpdateTotalZipLength)),
+                        ConfirmText = GameEntry.Localization.GetString("UpdateResourceViaCarrierDataNetwork.UpdateButton"),
+                        OnClickConfirm = StartUpdateResources,
+                        CancelText = GameEntry.Localization.GetString("UpdateResourceViaCarrierDataNetwork.QuitButton"),
+                        OnClickCancel = delegate (object userData) { UnityGameFramework.Runtime.GameEntry.Shutdown(ShutdownType.Quit); },
+                    });
+                }
                 return;
             }
 
@@ -67,6 +73,12 @@ namespace StarForce
             {
                 Object.Destroy(m_UpdateResourceForm.gameObject);
                 m_UpdateResourceForm = null;
+            }
+
+            if (m_ConfirmFormForm != null)
+            {
+                Object.Destroy(m_ConfirmFormForm.gameObject);
+                m_ConfirmFormForm = null;
             }
 
             GameEntry.Event.Unsubscribe(ResourceUpdateStartEventArgs.EventId, OnResourceUpdateStart);
@@ -91,6 +103,12 @@ namespace StarForce
 
         private void StartUpdateResources(object userData)
         {
+            if (m_ConfirmFormForm != null)
+            {
+                Object.Destroy(m_ConfirmFormForm.gameObject);
+                m_ConfirmFormForm = null;
+            }
+
             if (m_UpdateResourceForm == null)
             {
                 m_UpdateResourceForm = Object.Instantiate(GameEntry.BuiltinData.UpdateResourceFormTemplate);

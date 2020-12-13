@@ -43,6 +43,11 @@ namespace StarForce
             });
         }
 
+        public void OnOpenUrlButtonClick()
+        {
+            Application.OpenURL("https://gameframework.cn/");
+        }
+
 #if UNITY_2017_3_OR_NEWER
         protected override void OnOpen(object userData)
 #else

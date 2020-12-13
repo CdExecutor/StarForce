@@ -1,0 +1,52 @@
+ManifestFileVersion: 0
+CRC: 15086027
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a1a1fd0da4ae05a4b637059a52959914
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e2159b647947abf704ed7ca9ad63a671
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 02bbd1c1f00c17842b1449ae2b66a932, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a5079836f95c2a44b96fa331487ebb70, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+- Class: 225
+  Script: {instanceID: 0}
+Assets:
+- Assets/GameMain/UI/UIForms/SettingForm.prefab
+Dependencies:
+- E:/UnityProjects/StarForce/StarForce/output/Working/Windows/ui/uisprites/common
+- E:/UnityProjects/StarForce/StarForce/output/Working/Windows/ui/uisprites/icons

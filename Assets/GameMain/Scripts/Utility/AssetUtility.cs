@@ -6,6 +6,7 @@
 //------------------------------------------------------------
 
 using GameFramework;
+using UnityEngine;
 
 namespace StarForce
 {
@@ -59,6 +60,11 @@ namespace StarForce
         public static string GetUISoundAsset(string assetName)
         {
             return Utility.Text.Format("Assets/GameMain/UI/UISounds/{0}.wav", assetName);
+        }
+
+        public static string GetLuaTxt(string assetName)
+        {
+            return Utility.Text.Format("Assets/GameMain/Lua/{0}.lua.txt", assetName);
         }
     }
 }

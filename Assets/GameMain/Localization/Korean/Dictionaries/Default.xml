@@ -10,7 +10,8 @@
     <String Key="Menu.SettingButton" Value="설정" />
     <String Key="Menu.AboutButton" Value="정보" />
     <String Key="Menu.QuitButton" Value="아웃" />
-    <String Key="Dialog.ConfirmButton" Value="확인" />
+	<String Key="Menu.OpenUrl" Value="官网地址" />    
+	<String Key="Dialog.ConfirmButton" Value="확인" />
     <String Key="Dialog.CancelButton" Value="취소" />
     <String Key="Dialog.OtherButton" Value="" />
     <String Key="ForceUpdate.Title" Value="필수 업데이트" />

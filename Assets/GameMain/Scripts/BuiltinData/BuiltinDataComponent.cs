@@ -22,6 +22,9 @@ namespace StarForce
         [SerializeField]
         private UpdateResourceForm m_UpdateResourceFormTemplate = null;
 
+        [SerializeField]
+        private ConfirmForm m_ConfirmFormTemplate = null;
+
         private BuildInfo m_BuildInfo = null;
 
         public BuildInfo BuildInfo
@@ -37,6 +40,14 @@ namespace StarForce
             get
             {
                 return m_UpdateResourceFormTemplate;
+            }
+        }
+
+        public ConfirmForm ConfirmFormTemplate
+        {
+            get
+            {
+                return m_ConfirmFormTemplate;
             }
         }
 

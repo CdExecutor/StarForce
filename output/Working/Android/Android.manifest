@@ -1,0 +1,76 @@
+ManifestFileVersion: 0
+CRC: 2168906469
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: configs
+      Dependencies: {}
+    Info_1:
+      Name: datatables
+      Dependencies: {}
+    Info_2:
+      Name: entities
+      Dependencies:
+        Dependency_0: materials
+        Dependency_1: meshes
+    Info_3:
+      Name: fonts
+      Dependencies: {}
+    Info_4:
+      Name: localization
+      Dependencies: {}
+    Info_5:
+      Name: materials
+      Dependencies:
+        Dependency_0: textures
+    Info_6:
+      Name: meshes
+      Dependencies: {}
+    Info_7:
+      Name: music/music_about
+      Dependencies: {}
+    Info_8:
+      Name: music/music_background
+      Dependencies: {}
+    Info_9:
+      Name: music/music_menu
+      Dependencies: {}
+    Info_10:
+      Name: scenes
+      Dependencies:
+        Dependency_0: materials
+    Info_11:
+      Name: sounds
+      Dependencies: {}
+    Info_12:
+      Name: textures
+      Dependencies: {}
+    Info_13:
+      Name: ui/uiforms/aboutform
+      Dependencies:
+        Dependency_0: ui/uisprites/logos
+    Info_14:
+      Name: ui/uiforms/dialogform
+      Dependencies:
+        Dependency_0: ui/uisprites/common
+    Info_15:
+      Name: ui/uiforms/menuform
+      Dependencies:
+        Dependency_0: ui/uisprites/common
+    Info_16:
+      Name: ui/uiforms/settingform
+      Dependencies:
+        Dependency_0: ui/uisprites/common
+        Dependency_1: ui/uisprites/icons
+    Info_17:
+      Name: ui/uisounds/uisounds
+      Dependencies: {}
+    Info_18:
+      Name: ui/uisprites/common
+      Dependencies: {}
+    Info_19:
+      Name: ui/uisprites/icons
+      Dependencies: {}
+    Info_20:
+      Name: ui/uisprites/logos
+      Dependencies: {}

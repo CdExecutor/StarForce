@@ -1,0 +1,12 @@
+{
+    "ForceUpdateGame": false,
+    "LatestGameVersion": "0.1.0",
+    "InternalGameVersion": 0,
+    "InternalResourceVersion": 55,
+    "UpdatePrefixUri": "http://192.168.8.157/RemoteResource/{0}",
+    "VersionListLength": 7123,
+    "VersionListHashCode": 1821279204,
+    "VersionListZipLength": 2611,
+    "VersionListZipHashCode": 2074790248,
+    "END_OF_JSON": ""
+}
